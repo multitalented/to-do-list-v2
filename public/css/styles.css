@@ -1,0 +1,117 @@
+html {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #2F3A8F 20%, #CCD1E4 80%);
+  min-height: 1000px;
+  font-family: 'helvetica neue';
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #2F3A8F;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #CCD1E4;
+}
+
+/* the following two classes and min-width are my fix to the problem i found in
+Angela's code where once i increase the checkbox size for the list items,
+the checkbox size decreases as the text increases, and i prefer the bigger
+checkboxes so i am incorporating these changes - NOT the problem */
+/* .itemText {
+  display: inline-block;
+}
+.itemCheckbox {
+  display: inline-block;
+  /* min-width: 48px; /* calculate this to be checkbox width (3rem)
+} */
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #000B49;
+}
+
+/* there is a weird bug happening where the second checkbox in the list gets
+slightly smaller and then the rest are expected size, and one time a few of the
+checkboxes got sequentially smaller -
+SOLVED, result of flexbox and longer text items without defining min-width for
+checkboxes to prevent them from becoming infinitely smaller */
+input[type="checkbox"] {
+  margin: 20px;
+  width: 2rem;
+  height: 2rem;
+  min-width: 2rem; /* this works and is more understandable and
+  easily debuggable if the min-width fix is just placed here instead */
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #000B49;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #2F3A8F;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #000B49;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  /* color: rgba(0, 0, 0, 0.5); */
+  text-align: center;
+}
